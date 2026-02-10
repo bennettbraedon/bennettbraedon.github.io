@@ -187,3 +187,107 @@ section a:hover {
 }
 
 /* ================================
+
+/*************************************
+   CONTACT PAGE — IMPROVED STYLING
+   (Keeps the original site design)
+**************************************/
+
+/* Wraps your form nicely */
+.contact-container {
+  width: 85%;
+  max-width: 600px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  backdrop-filter: blur(6px);
+}
+
+/* Contact title consistent with other sections */
+.contact-container h2 {
+  text-align: center;
+  color: royalblue;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Form layout improvements */
+.one-col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+}
+
+/* Labels */
+.one-col label {
+  font-weight: bold;
+  color: darkblue;
+}
+
+/* Inputs & textarea styled like your site */
+.one-col input,
+.one-col textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid lightslategray;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus effect matches your site color palette */
+.one-col input:focus,
+.one-col textarea:focus {
+  outline: none;
+  border-color: royalblue;
+  box-shadow: 0 0 6px rgba(65, 105, 225, 0.4);
+}
+
+/* Submit button */
+button[type="submit"] {
+  background: royalblue;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.15rem;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+button[type="submit"]:hover {
+  background: darkblue;
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+  transform: translateY(0px);
+}
+
+/* Responsive: form stays clean on mobile */
+@media (max-width: 680px) {
+  .contact-container {
+    width: 92%;
+    padding: 20px;
+  }
+}
+
+
+
+/* CONTACT PAGE — centered paragraph(s) */
+.contact-container .contact-intro {
+  max-width: 720px;          /* keeps lines readable */
+  margin: 0 auto 18px auto;  /* centers the block */
+  text-align: center;        /* centers the text */
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: #2a2a2a;
+  padding: 8px 2px;          /* subtle breathing room */
+}
+
