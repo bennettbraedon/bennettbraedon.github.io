@@ -1,136 +1,189 @@
-/* This will remove default page margins for entire body element*/
-body {
-    margin: 0;
-  }
+/* ================================
+   GLOBAL RESET + BASE STYLES
+==================================*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-/****************   Nav Section **********************/
+body {
+  margin: 0;
+  font-family: "Inter", "Montserrat", sans-serif;
+  background: linear-gradient(135deg, #e8eef9, #f6f9fc);
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* ================================
+   NAVIGATION BAR
+==================================*/
 nav {
   display: flex;
-	background-color: lightslategray;
-  font-size: large;
-  font-weight: bold;
   justify-content: space-between;
-  padding: 10px;
+  padding: 15px 25px;
+  background: linear-gradient(90deg, #445a7c, #607d9c);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-/***********************  Footer Section   **************************/
-footer {
-	display: flex;
-  justify-content: center;
-  border-top: 2px solid black;
-  padding: 5px;
-  background-color: royalblue;
+nav a {
+  text-decoration: none;
+  color: #f0f4ff;
+  transition: 0.3s ease;
 }
 
-/*********** Splash Page ************************/
+nav a:hover {
+  color: #d0e2ff;
+}
+
+/* ================================
+   HEADER / SPLASH
+==================================*/
 header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-top: solid 1px black;
-  border-bottom: solid 1px black;
-  padding: 10px;
+  text-align: center;
+  padding: 40px 20px;
+  background: white;
+  border-bottom: 2px solid #d3d3d3;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
 }
 
 header h1 {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  color: darkblue;
+  font-size: 3rem;
+  color: #0a2a59;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 header img {
-  border: 3px solid darkblue;
+  border: 4px solid #0a2a59;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  margin-top: 20px;
 }
 
 .address {
- line-height: 2;
- font-weight: bold;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #333;
 }
 
 .tagline {
   font-style: italic;
+  color: #4a4a4a;
 }
 
-/************* Sections ********************/
-hr {
-
+/* ================================
+   SECTIONS
+==================================*/
+section {
+  margin: 40px auto;
+  width: 85%;
+  max-width: 900px;
+  background: rgba(255,255,255,0.75);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  backdrop-filter: blur(8px);
 }
 
 section h3 {
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  color: blue;
+  font-size: 1.8rem;
+  color: #003399;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  border-left: 4px solid #003399;
+  padding-left: 12px;
 }
 
 section dl {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 0.75rem 1.5rem;
+  gap: 12px 20px;
+  margin-top: 10px;
 }
 
 section ul {
   list-style-type: square;
+  margin-left: 20px;
 }
 
 section a {
+  color: #c0392b;
   text-decoration: none;
-  color: red;
-  transition: color 0.2s ease;
+  font-weight: 600;
+  transition: 0.25s ease;
 }
 
 section a:hover {
-  color: royalblue;
+  color: #0066cc;
 }
 
-/**************   Projects   *****************/
+/* ================================
+   PROJECT CARDS
+==================================*/
 .three-col {
-	display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
-}
-
-.card img {
-  border-radius: 5px 5px 0px 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 20px;
 }
 
 .card {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  padding-bottom: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  transition: 0.3s ease;
+  text-align: center;
 }
 
-/**************   Responsiveness   *****************/
-@media (max-width: 680px) {
-    nav {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .three-col {
-       grid-template-columns: 1fr;
-    }
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.18);
 }
 
-/**************   Contact Page   *****************/
-.one-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
-input {
-  box-sizing: border-box;
-  width: 25%;
+/* ================================
+   RESPONSIVE DESIGN
+==================================*/
+@media (max-width: 850px) {
+  .three-col {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-textarea {
-  width: 25%;
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .three-col {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 2.4rem;
+  }
+
+  section {
+    width: 92%;
+  }
 }
+
+/* ================================
