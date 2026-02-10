@@ -1,52 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Braedon Bennett</title>
-    <script src="https://kit.fontawesome.com/fbd2dada15.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts for Inter, Montserrat, Raleway -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Raleway:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Your site CSS: make sure folder name and path are exact -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <title>Braedon Bennett — Contact</title>
+  <script src="https://kit.fontawesome.com/fbd2dada15.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav>
-        <p>Braedon Bennett</p>
-        <p>
-            <a href="index.html">About Braedon Bennett</a>
-        </p>
-    </nav>
+  <nav>
+    <p>Braedon Bennett</p>
+    <p>
+      <a href="index.html">About Braedon Bennett</a>
+    </p>
+  </nav>
 
-  
-    <section class="contact-container">
-    <h1>Braedon Bennett</h1>
+  <section class="contact-container">
+    <h1>Contact Braedon</h1>
+
     <p class="contact-intro">
-        2451 Peak Ridge Ln, Gainesville, GA 30504 | (706) 809-7276 | bennettbraedon@gmail.com
+      2451 Peak Ridge Ln, Gainesville, GA 30504 &nbsp;|&nbsp; (706) 809-7276 &nbsp;|&nbsp; bennettbraedon@gmail.com
     </p>
     <p class="contact-intro">
-        I am a third-year accounting student looking for a 2026 summer internship
+      I am a third-year accounting student looking for a 2026 summer internship.
     </p>
-    <hr>
-    </section>
+    <hr />
+  </section>
 
+  <section class="form-wrap">
+    <!-- If using formsubmit.co, consider adding a _next parameter to control the thank-you redirect -->
+    <form
+      action="https://formsubmit.co/beb97080@uga.edu"
+      method="POST"
+      class="form-grid"
+    >
+      <!-- Recommended hidden inputs -->
+      <input type="hidden" name="_subject" value="New message from your portfolio site" />
+      <input type="hidden" name="_template" value="table" />
+      <!-- Optional redirect after submit -->
+      <!-- <input type="hidden" name="_next" value="https://YOUR_USERNAME.github.io/YOUR_REPO/thanks.html" /> -->
 
+      <label for="name">Name</label>
+      <input id="name" type="text" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" placeholder="email@example.com" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" placeholder="How can I help?" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
     <section>
-        <form action="https://formsubmit.co/beb97080@uga.edu" method="POST" class="one-col">
-            <p class="one-col">Name:</p>
-            <input type="text" name="name" placeholder="name" required class="one-col">
-            <p class="one-col">Email:</p>
-            <input type="email" name="email" placeholder="email address" required class="one-col">
-            <p class="one-col"> Message:</p>
-            <textarea name="message" id="message" class="one-col"></textarea>
-            <button type="submit" class="one-col">Send</button>
-        </form>
+      <p>
+        &copy; <a href="index.html">Braedon Bennett</a>
+        <a href="https://linkedin.com/in/braedonbennett/" target="_blank" rel="noopener">
+          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+          <span class="sr-only">LinkedIn</span>
+        </a>
+      </p>
     </section>
-
-    <footer>
-        <p>
-            &copy; <a href="index.html">Braedon Bennett</a>
-            <a href="https://linkedin.com/in/braedonbennett/" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>        
-        </p>
-    </footer>
+  </footer>
 </body>
-</html> 
+</html>
