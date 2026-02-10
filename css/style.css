@@ -1,0 +1,136 @@
+/* This will remove default page margins for entire body element*/
+body {
+    margin: 0;
+  }
+
+/****************   Nav Section **********************/
+nav {
+  display: flex;
+	background-color: lightslategray;
+  font-size: large;
+  font-weight: bold;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/***********************  Footer Section   **************************/
+footer {
+	display: flex;
+  justify-content: center;
+  border-top: 2px solid black;
+  padding: 5px;
+  background-color: royalblue;
+}
+
+/*********** Splash Page ************************/
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  padding: 10px;
+}
+
+header h1 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  color: darkblue;
+}
+
+header img {
+  border: 3px solid darkblue;
+}
+
+.address {
+ line-height: 2;
+ font-weight: bold;
+}
+
+.tagline {
+  font-style: italic;
+}
+
+/************* Sections ********************/
+hr {
+
+}
+
+section h3 {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  color: blue;
+}
+
+section dl {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0.75rem 1.5rem;
+}
+
+section ul {
+  list-style-type: square;
+}
+
+section a {
+  text-decoration: none;
+  color: red;
+  transition: color 0.2s ease;
+}
+
+section a:hover {
+  color: royalblue;
+}
+
+/**************   Projects   *****************/
+.three-col {
+	display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.card img {
+  border-radius: 5px 5px 0px 0px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/**************   Responsiveness   *****************/
+@media (max-width: 680px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .three-col {
+       grid-template-columns: 1fr;
+    }
+}
+
+/**************   Contact Page   *****************/
+.one-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+input {
+  box-sizing: border-box;
+  width: 25%;
+}
+
+textarea {
+  width: 25%;
+}
