@@ -305,3 +305,101 @@ button[type="submit"]:active {
     width: 92%;
   }
 }
+
+.address,
+.tagline {
+    text-align: center;   /* Centers the text horizontally */
+    margin: 0 auto;       /* Ensures the element stays centered */
+    display: block;       /* Makes sure the p element behaves predictably */
+    width: 100%;          /* Allows full‑width centering */
+}
+
+/* Optional: Add spacing or styling */
+.address {
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.tagline {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Footer base styles */
+footer {
+    background: #f7f9fc;              /* soft light background */
+    border-top: 1px solid #e3e8ef;    /* subtle separator */
+    padding: 16px 20px;
+    margin-top: 40px;
+    color: #334155;                   /* slate/dark gray text */
+    font-size: 0.95rem;
+}
+
+footer p {
+    margin: 0;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;          /* centers everything horizontally */
+    flex-wrap: wrap;
+}
+
+/* Link styles: use blue shades (not pink) */
+footer a {
+    color: #1d4ed8;                   /* blue-700 */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 160ms ease, transform 160ms ease;
+}
+
+footer a:hover,
+footer a:focus-visible {
+    color: #0ea5e9;                   /* blue/cyan hover */
+    text-decoration: underline;
+}
+
+/* Icon styling (Font Awesome LinkedIn) */
+footer i.fa-linkedin {
+    font-size: 1.15rem;
+    vertical-align: middle;
+    color: #0a66c2;                   /* LinkedIn brand blue */
+}
+
+footer a:hover i.fa-linkedin,
+footer a:focus-visible i.fa-linkedin {
+    color: #1287f5;
+}
+
+/* Optional: add a small divider dot between items (except after last) */
+footer p a + a::before {
+    content: "•";
+    margin: 0 8px 0 2px;
+    color: #94a3b8;                   /* muted dot */
+    font-weight: 400;
+}
+
+/* Focus visibility for keyboard users */
+footer a:focus-visible {
+    outline: 2px solid #93c5fd;       /* light blue ring */
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Dark mode (optional but nice) */
+@media (prefers-color-scheme: dark) {
+    footer {
+        background: #0b1220;
+        border-top-color: #1f2a44;
+        color: #e5e7eb;
+    }
+    footer a {
+        color: #60a5fa;               /* blue-400 */
+    }
+    footer a:hover,
+    footer a:focus-visible {
+        color: #38bdf8;               /* cyan-400 hover */
+    }
+    footer p a + a::before {
+        color: #64748b;
+    }
+}
