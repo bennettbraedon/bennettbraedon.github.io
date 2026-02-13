@@ -101,6 +101,7 @@ section h3 {
   letter-spacing: 1px;
   margin-bottom: 15px;
   border-left: 4px solid #003399;
+  border-bottom: 4px solid #003399;
   padding-left: 12px;
 }
 
@@ -156,6 +157,14 @@ section a:hover {
   width: 100%;
   height: 180px;
   object-fit: cover;
+  padding: 10px;      /* adds space inside the image area */
+  display: block;     /* prevents inline spacing issues */
+  margin: 0 auto;     /* optional: centers the image */
+  border-bottom: 2px black solid;
+  border-top: 2px black solid;
+  border-left: 2px black solid;
+  border-right: 2px black solid;
+
 }
 
 /* ================================
@@ -403,3 +412,6 @@ footer a:focus-visible {
         color: #64748b;
     }
 }
+
+
+
